@@ -41,16 +41,16 @@
 /**
  * \brief           UART for communicate with HOST
  */
-#define UART                UART0
-#define UART_NUM            0
+#define UART                UART1
+#define UART_NUM            1
 #define UART_PORT           GPIOB
 #define UART_PORT_EN        RCU_HCLKCFG_GPIOBEN_Msk
-#define UART_PIN_RX_POS     11
-#define UART_PIN_TX_POS     10
+#define UART_PIN_RX_POS     9
+#define UART_PIN_TX_POS     8
 #define UART_PINS_MSK       ((1<<UART_PIN_RX_POS) | (1<<UART_PIN_TX_POS))
-#define UART_RX_IRQHandler  UART0_RX_IRQHandler
-#define UART_RX_IRQn        UART0_RX_IRQn
-#define UART_TIMEOUT        (500)//ms
+#define UART_RX_IRQHandler  UART1_RX_IRQHandler
+#define UART_RX_IRQn        UART1_RX_IRQn
+#define UART_TIMEOUT        (5000)//ms
 
 /**
  * \brief           Timer for calculate uart speed
