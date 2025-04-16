@@ -1,3 +1,7 @@
+This fork adds support for LDM-BB-K1946VK035 minimal evaluation board by LDM-Systems.
+
+"uKEY" (the button at the tip of the board) is used to enter the bootloader after a reset. Since DTR line from the USB-Serial chip is not connected to nRST line, the reset has to be manual, therefore one has to press both RST and uKEY buttons, then let go of the RST button, and then let go of the uKEY button (similar to so-called "button play" in ESP32 world). Afterwards the bootloader will be waiting for 5 seconds for the flasher to connect (default bootloader timeout was increased to 5s).
+
 ## Bootloader for k1921vk035
 Bootloader for K1921VK035. Is used with flasher tool [k1921vkx_flasher](https://github.com/DCVostok/k1921vkx_flasher). Bootloader firmware is loaded to flash NVR region with size 3 kB. 
 
